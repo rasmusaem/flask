@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Beskyttet Side{% endblock %}
+
+{% block content %}
+<h1>Velkommen til den beskyttede side</h1>
+<p>Kun autoriserede brugere kan se denne side. Hvis du ser dette, betyder det, at du er logget ind.</p>
+<p>Her kan du få adgang til følsomme oplysninger eller udføre handlinger, der kræver særlige rettigheder.</p>
+<ul>
+    <li><strong>Se rapporter:</strong> Adgang til virksomhedsrapporter.</li>
+    <li><strong>Brugeradministration:</strong> Administrer medarbejderkonti.</li>
+    <li><strong>Sikkerhed:</strong> Opdater sikkerhedsindstillinger.</li>
+</ul>
+<a href="{{ url_for('logout') }}" class="btn btn-danger">Log ud</a>
+{% endblock %}
